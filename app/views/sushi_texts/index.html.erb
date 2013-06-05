@@ -1,0 +1,26 @@
+<h1>Listing sushi_texts</h1>
+
+<table border="1" cellpadding="5" cellspacing="5">
+  <tr>
+    <th>Lang</th>
+    <th>Text</th>
+    <th>Sushi</th>
+    <th>Type</th>
+  </tr>
+
+<% @sushi_texts.each do |sushi_text| %>
+  <tr>
+    <td><%=h sushi_text.lang %></td>
+    <td><%=h sushi_text.text %></td>
+    <td><%=h sushi_text.sushi_id %></td>
+    <td><%=h sushi_text.code %></td>
+    <td><%= link_to 'Show', sushi_text %></td>
+    <td><%= link_to 'Edit', edit_sushi_text_path(sushi_text) %></td>
+    <td><%= link_to 'Destroy', sushi_text, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New sushi_text', new_sushi_text_path %>

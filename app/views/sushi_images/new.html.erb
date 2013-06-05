@@ -1,0 +1,19 @@
+<h1>New sushi_image</h1>
+
+<% form_for(@sushi_image) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :sushi_id %><br />
+    <%= f.text_field :sushi_id %>
+  </p>
+  <p>
+    <%= f.label :image %><br />
+    <%= f.text_field :image %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', sushi_images_path %>

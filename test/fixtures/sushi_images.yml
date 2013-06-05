@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  sushi_id: 1
+  image: 
+
+two:
+  sushi_id: 1
+  image: 

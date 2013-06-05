@@ -1,0 +1,2 @@
+module ComponentGroupTextsHelper
+end

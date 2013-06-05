@@ -1,0 +1,20 @@
+<h1>Editing component_group_text</h1>
+
+<% form_for(@component_group_text) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :lang %><br />
+    <%= f.text_field :lang %>
+  </p>
+  <p>
+    <%= f.label :text %><br />
+    <%= f.text_field :text %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @component_group_text %> |
+<%= link_to 'Back', component_group_texts_path %>

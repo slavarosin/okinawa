@@ -1,0 +1,23 @@
+<p>
+  <b>Lang:</b>
+  <%=h @sushi_text.lang %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%=h @sushi_text.text %>
+</p>
+
+<p>
+  <b>Sushi:</b>
+  <%=h @sushi_text.sushi_id %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @sushi_text.type %>
+</p>
+
+
+<%= link_to 'Edit', edit_sushi_text_path(@sushi_text) %> |
+<%= link_to 'Back', sushi_texts_path %>

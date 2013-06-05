@@ -1,0 +1,12 @@
+<h1>Editing component_group</h1>
+
+<% form_for(@component_group) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @component_group %> |
+<%= link_to 'Back', component_groups_path %>

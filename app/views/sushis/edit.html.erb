@@ -1,0 +1,12 @@
+<h1>Editing sushi</h1>
+
+<% form_for(@sushi) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @sushi %> |
+<%= link_to 'Back', sushis_path %>

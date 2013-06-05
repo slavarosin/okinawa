@@ -1,0 +1,22 @@
+<h1>Listing sushi_images</h1>
+
+<table>
+  <tr>
+    <th>Sushi</th>
+    <th>Image</th>
+  </tr>
+
+<% @sushi_images.each do |sushi_image| %>
+  <tr>
+    <td><%=h sushi_image.sushi_id %></td>
+    <td><%=h sushi_image.image %></td>
+    <td><%= link_to 'Show', sushi_image %></td>
+    <td><%= link_to 'Edit', edit_sushi_image_path(sushi_image) %></td>
+    <td><%= link_to 'Destroy', sushi_image, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New sushi_image', new_sushi_image_path %>

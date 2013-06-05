@@ -1,0 +1,36 @@
+<h1>Listing of Sushi</h1>
+
+<table border="1" cellpadding="5" cellspacing="5">
+  <tr>
+  	<td class="header">ID</td>
+	<% sushi_codes.each do |code| %>
+		<% locales.each do |locale| %>
+		 	<td class="header"><%= code %> (<%= locale %>)</td>
+		<% end %>			
+	<% end %>
+  </tr>
+
+<% @sushis.each do |sushi| %>
+  <tr>
+    <td><%= sushi.id %></td>
+	<% sushi_codes.each do |code| %>
+		<% locales.each do |locale| %>
+		 	
+		 		<% a = get_sushi_text(sushi.id, code, locale) %>
+				<% if (!a.nil?) %>
+				<td><%= link_to a.text, 'sushi_texts/' + a.id.to_s + '/edit' %></td>
+				<% else %>
+				<td class="missing"><%= "-" %></td>
+				<% end %>				
+		<% end %>
+	<% end %>
+    <td><%= link_to 'Show', sushi %></td>
+    <td><%= link_to 'Edit', edit_sushi_path(sushi) %></td>
+    <td><%= link_to 'Destroy', sushi, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New sushi', new_sushi_path %>
